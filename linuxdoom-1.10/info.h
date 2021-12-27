@@ -1,4 +1,4 @@
-// Emacs style mode select   -*- C++ -*- 
+// Emacs style mode select   -*- C++ -*-
 //-----------------------------------------------------------------------------
 //
 // $Id:$
@@ -27,8 +27,7 @@
 // Needed for action function pointer handling.
 #include "d_think.h"
 
-typedef enum
-{
+typedef enum {
     SPR_TROO,
     SPR_SHTG,
     SPR_PUNG,
@@ -171,8 +170,7 @@ typedef enum
 
 } spritenum_t;
 
-typedef enum
-{
+typedef enum {
     S_NULL,
     S_LIGHTDONE,
     S_PUNCH,
@@ -1143,22 +1141,18 @@ typedef enum
     NUMSTATES
 } statenum_t;
 
-
-typedef struct
-{
-  spritenum_t	sprite;
-  long			frame;
-  long			tics;
-  // void		(*action) ();
-  actionf_t			action;
-  statenum_t			nextstate;
-  long			misc1, misc2;
+typedef struct {
+    spritenum_t sprite;
+    long frame;
+    long tics;
+    // void		(*action) ();
+    actionf_t action;
+    statenum_t nextstate;
+    long misc1, misc2;
 } state_t;
 
-extern state_t	states[NUMSTATES];
+extern state_t states[NUMSTATES];
 extern char *sprnames[NUMSPRITES];
-
-
 
 typedef enum {
     MT_PLAYER,
@@ -1302,31 +1296,30 @@ typedef enum {
 
 } mobjtype_t;
 
-typedef struct
-{
-    int	doomednum;
-    int	spawnstate;
-    int	spawnhealth;
-    int	seestate;
-    int	seesound;
-    int	reactiontime;
-    int	attacksound;
-    int	painstate;
-    int	painchance;
-    int	painsound;
-    int	meleestate;
-    int	missilestate;
-    int	deathstate;
-    int	xdeathstate;
-    int	deathsound;
-    int	speed;
-    int	radius;
-    int	height;
-    int	mass;
-    int	damage;
-    int	activesound;
-    int	flags;
-    int	raisestate;
+typedef struct {
+    int doomednum;
+    int spawnstate;
+    int spawnhealth;
+    int seestate;
+    int seesound;
+    int reactiontime;
+    int attacksound;
+    int painstate;
+    int painchance;
+    int painsound;
+    int meleestate;
+    int missilestate;
+    int deathstate;
+    int xdeathstate;
+    int deathsound;
+    int speed;
+    int radius;
+    int height;
+    int mass;
+    int damage;
+    int activesound;
+    int flags;
+    int raisestate;
 
 } mobjinfo_t;
 

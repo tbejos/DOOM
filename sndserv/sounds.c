@@ -1,4 +1,4 @@
-// Emacs style mode select   -*- C++ -*- 
+// Emacs style mode select   -*- C++ -*-
 //-----------------------------------------------------------------------------
 //
 // $Id: sounds.c,v 1.3 1997/01/29 22:40:44 b1 Exp $
@@ -33,13 +33,11 @@
 //
 //-----------------------------------------------------------------------------
 
-
 static const char rcsid[] = "$Id: sounds.c,v 1.3 1997/01/29 22:40:44 b1 Exp $";
 
-
-
 // Not exactly a good idea.
-enum { false, true };
+enum { false,
+       true };
 
 #include "sounds.h"
 
@@ -47,8 +45,7 @@ enum { false, true };
 // Information about all the music
 //
 
-musicinfo_t S_music[] =
-{
+musicinfo_t S_music[] = {
     { 0 },
     { "e1m1", 0 },
     { "e1m2", 0 },
@@ -116,16 +113,14 @@ musicinfo_t S_music[] =
     { "ultima", 0 },
     { "read_m", 0 },
     { "dm2ttl", 0 },
-    { "dm2int", 0 } 
+    { "dm2int", 0 }
 };
-
 
 //
 // Information about all the sfx
 //
 
-sfxinfo_t S_sfx[] =
-{
+sfxinfo_t S_sfx[] = {
     { 0 },
     { "pistol", false, 64, 0, -1, -1, 0 },
     { "shotgn", false, 64, 0, -1, -1, 0 },
@@ -234,6 +229,5 @@ sfxinfo_t S_sfx[] =
     { "skeact", false, 70, 0, -1, -1, 0 },
     { "skesit", false, 70, 0, -1, -1, 0 },
     { "skeatk", false, 70, 0, -1, -1, 0 },
-    { "radio", false, 60, 0, -1, -1, 0 } 
+    { "radio", false, 60, 0, -1, -1, 0 }
 };
-
