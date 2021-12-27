@@ -54,7 +54,7 @@ static const char rcsid[] = "$Id: i_x.c,v 1.6 1997/02/03 22:45:10 b1 Exp $";
 SDL_Window *SDL_window = NULL;
 SDL_Renderer *SDL_renderer = NULL;
 SDL_Texture *SDL_doomTexture = NULL;
-int8_t colors[256 * 3]; // CB: new palettes
+int8_t colors[256 * 4]; // CB: new palettes
 
 // Fake mouse handling.
 // This cannot work properly w/o DGA.
@@ -66,7 +66,7 @@ int doPointerWarp = POINTER_WARP_COUNTDOWN;
 // replace each 320x200 pixel with multiply*multiply pixels.
 // According to Dave Taylor, it still is a bonehead thing
 // to use ....
-static int multiply = 3;
+static int multiply = 4;
 
 //
 //  Translates the key currently in X_event
@@ -322,7 +322,7 @@ void I_ReadScreen(byte *scr)
 void I_SetPalette(byte *palette)
 {
     int c;
-    for (int i = 0; i < 256 * 3; i++) {
+    for (int i = 0; i < 256 * 4; i++) {
         c = gammatable[usegamma][*palette++];
         colors[i] = (c << 8) + c;
     }
